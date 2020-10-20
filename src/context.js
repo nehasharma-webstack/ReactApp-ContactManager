@@ -12,6 +12,11 @@ const reducer = (state, action) => {
           return contact.id !== action.payload;
         }),
       };
+    case "ADD_CONTACT":
+      return {
+        ...state,
+        contacts: [action.payload, ...state.contacts],
+      };
     default:
       return this.state;
   }
@@ -23,19 +28,19 @@ export class Provider extends Component {
         id: 1,
         name: "Neha",
         phone: "6767878789",
-        location: "Ludhiana",
+        email: "fhgj@loc.com",
       },
       {
         id: 2,
         name: "Pankaj",
         phone: "7876565454",
-        location: "Jalandhar",
+        email: "Jalandhar@hgjh.com",
       },
       {
         id: 3,
         name: "Namita",
         phone: "9099896889",
-        location: "Delhi",
+        email: "Delhi@gfhj.com",
       },
     ],
     dispatch: (action) => {
