@@ -86,7 +86,7 @@ Contact.propTypes = {
   contact: PropTypes.object.isRequired,
   // onDeleteContact: PropTypes.func.isRequired,
   // name: PropTypes.object.isRequired,
-  // location: PropTypes.string.isRequired,
+
   // phone: PropTypes.string.isRequired,
 };
 

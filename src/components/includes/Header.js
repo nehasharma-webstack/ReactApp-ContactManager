@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
   const { title } = props;
@@ -8,13 +9,27 @@ const Header = (props) => {
     <div>
       <nav className="navbar navbar-dark bg-dark text-white">
         {title}
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <a className="nav-link" href="/">
-              Home
-            </a>
-          </li>
-        </ul>
+        <div className="navbar">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Home
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/add-contact">
+                Add Contact
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/about/:id">
+                About Us
+              </Link>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   );
