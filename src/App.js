@@ -4,6 +4,8 @@ import Header from "./components/includes/Header";
 import AddContacts from "./components/contacts/AddContact";
 import { Provider } from "./context";
 import About from "./components/pages/About";
+import PageNotFound from "./components/pages/404";
+import Test from "./components/test/Test";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
@@ -23,9 +25,11 @@ const App = () => {
 
           <div className="container">
             <Switch>
-              <Route exact path="/" component={Contacts} />
               <Route exact path="/add-contact" component={AddContacts} />
+              <Route exact path="/" component={Contacts} />
               <Route exact path="/about/:id" component={About} />
+              <Route exact path="/test" component={Test} />
+              <Route path="*" component={PageNotFound} />
             </Switch>
           </div>
         </div>
